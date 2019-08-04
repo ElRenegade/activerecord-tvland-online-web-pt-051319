@@ -6,7 +6,7 @@ class Actor < ActiveRecord::Base
   name =   "{self.first_name} #{self.last_name}"
   end
 
-  
+
   def list_roles
     roles = []
     array_of_characters = self.characters.map {|character| character.name}
@@ -15,5 +15,5 @@ class Actor < ActiveRecord::Base
     roles << role.join(" - ")
     roles
   end
-  
+
 end
